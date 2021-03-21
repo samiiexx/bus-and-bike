@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.scene {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/background.svg") repeat-x;
+  border-bottom: 5px solid #000;
+  animation: move_background 6s infinite linear;
+  transform: translateZ(0);
+}
+.position_littleguy {
+  position: absolute;
+  bottom: 140px;
+  left: calc(50% - 142px);
+}
+.littleguy {
+  animation: walk 1.5s steps(8) infinite;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/littleguy.svg") 0 0 no-repeat;
+  width: 285px;
+  height: 380px;
+  transform: scale(0.5, 0.5);
+}
+.shops {
+  position: absolute;
+  bottom: 275px;
+}
+#purple {
+  animation: move_shop 36s infinite linear;
+  color: #772abc;
+}
+#red {
+  animation: move_shop 36s infinite linear 6s;
+  color: #bc1e27;
+}
+#green {
+  animation: move_shop 36s infinite linear 12s;
+  color: #81bc20;
+}
+#blue {
+  animation: move_shop 36s infinite linear 18s;
+  color: #38bcac;
+}
+#lavender {
+  animation: move_shop 36s infinite linear 24s;
+  color: #9a48bc;
+}
+#yellow {
+  animation: move_shop 36s infinite linear 30s;
+  color: #e1c820;
+}
+use#blue_starter {
+  transform: translateX(3900px);
+  animation: move_shop 36s 1 linear;
+  color: #38bcac;
+}
+#lavender_starter {
+  transform: translateX(3900px);
+  animation: move_shop 36s 1 linear;
+  color: #9a48bc;
+}
+#yellow_starter {
+  transform: translateX(3900px);
+  animation: move_shop 36s 1 linear;
+  color: #e1c820;
+}
+@keyframes walk {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2280px 0;
+  }
+}
+@keyframes move_background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 650px 0;
+  }
+}
+@keyframes move_shop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(3900px);
+  }
+}
