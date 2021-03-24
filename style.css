@@ -3,35 +3,85 @@
 }
 body {
   overflow-x: hidden;
+  background-color: #076425;
 }
 .scene {
   position: relative;
   width: 100%;
   height: 700px;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/background.svg") repeat-x;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/background.svg")
+    repeat-x;
   border-bottom: 5px solid #000;
   animation: move_background 6s infinite linear;
   transform: translateZ(0);
 }
-.position_littleguy {
+.position_bus {
   position: absolute;
   bottom: 140px;
   left: calc(50% - 142px);
 }
-.littleguy {
+/* .littleguy {
   animation: walk 1.5s steps(8) infinite;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/littleguy.svg") 0 0 no-repeat;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/littleguy.svg")
+    0 0 no-repeat;
   width: 285px;
   height: 380px;
   transform: scale(0.5, 0.5);
+} */
+
+.bus {
+  animation: move_up_down 1s ease infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 512px;
+  height: 194px;
+  background: url("img/bus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+.wheel {
+  animation: rotate 1s linear infinite;
+  position: absolute;
+  left: 83px;
+  bottom: -21px;
+  width: 72px;
+  height: 72px;
+  background: url("img/wheel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wheel:nth-of-type(2) {
+  left: 363px;
+}
+
+.position_lady {
+  position: absolute;
+  bottom: -100px;
+  left: calc(50% - 500px);
+}
+
+.lady {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 210px;
+  background: url("img/lady.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* transform: scaleX(-1); */
+}
+
 .shops {
   position: absolute;
   bottom: 275px;
 }
 #purple {
   animation: move_shop 36s infinite linear;
-  color: #772abc;
+  color: #3dac56;
 }
 #red {
   animation: move_shop 36s infinite linear 6s;
@@ -39,19 +89,19 @@ body {
 }
 #green {
   animation: move_shop 36s infinite linear 12s;
-  color: #81bc20;
+  color: #066723;
 }
 #blue {
   animation: move_shop 36s infinite linear 18s;
-  color: #38bcac;
+  color: #12ade5;
 }
 #lavender {
   animation: move_shop 36s infinite linear 24s;
-  color: #9a48bc;
+  color: #475e5e;
 }
 #yellow {
   animation: move_shop 36s infinite linear 30s;
-  color: #e1c820;
+  color: #f9c010;
 }
 use#blue_starter {
   transform: translateX(3900px);
@@ -61,7 +111,7 @@ use#blue_starter {
 #lavender_starter {
   transform: translateX(3900px);
   animation: move_shop 36s 1 linear;
-  color: #9a48bc;
+  color: #32a0c9;
 }
 #yellow_starter {
   transform: translateX(3900px);
@@ -90,5 +140,22 @@ use#blue_starter {
   }
   to {
     transform: translateX(3900px);
+  }
+}
+@keyframes move_up_down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
