@@ -1,7 +1,7 @@
-# Sprite and Loop Animation
-Sprite and loop animation
+# Bus and Bike Animation
+Animation of a moving bus and bike
 
-![Sprite and loop animation](screenshot.jpg)
+![Bus and Bike animation](screenshot.jpg)
 
 ## Built With
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
