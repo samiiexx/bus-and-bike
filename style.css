@@ -17,6 +17,7 @@ body {
 }
 .position_bus {
   position: absolute;
+  /* position: relative; */
   bottom: 140px;
   left: calc(50% - 142px);
 }
@@ -55,6 +56,37 @@ body {
 
 .wheel:nth-of-type(2) {
   left: 363px;
+}
+
+
+.motorbike {
+  position: absolute;
+  bottom: 320px;
+  animation: drive 5s ease-in forwards infinite;
+}
+
+.bike {
+  width: 400px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: 1;
+}
+
+.bike-tyre {
+  position: absolute;
+  width: 120px;
+  height: auto;
+}
+
+.motorbike img:nth-child(2){
+  top: 150px;
+  left: -10px;
+}
+
+.motorbike img:nth-child(3){
+  top: 150px;
+  left: 290px;
 }
 
 .position_lady {
@@ -118,6 +150,21 @@ use#blue_starter {
   animation: move_shop 36s 1 linear;
   color: #e1c820;
 }
+
+
+/*=============================================
+=            Keyframes            =
+=============================================*/
+
+@keyframes drive {
+  0%{
+      transform: translateX(2000px);
+  }
+  100%{
+      transform: translateX(-450px);
+  }
+}
+
 @keyframes walk {
   from {
     background-position: 0 0;
@@ -159,3 +206,4 @@ use#blue_starter {
     transform: rotate(0deg);
   }
 }
+/*=====  End of Keyframes  ======*/
