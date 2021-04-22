@@ -7,14 +7,16 @@ body {
 }
 .scene {
   position: relative;
-  width: 100%;
+  width: 120%;
   height: 700px;
   background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/background.svg")
     repeat-x;
   border-bottom: 5px solid #000;
   animation: move_background 6s infinite linear;
-  transform: translateZ(0);
+  transform: translate(-10px, -10px);
+  /* transform: translateZ(0); */
 }
+
 .position_bus {
   position: absolute;
   /* position: relative; */
@@ -58,7 +60,6 @@ body {
   left: 363px;
 }
 
-
 .motorbike {
   position: absolute;
   bottom: 320px;
@@ -68,25 +69,27 @@ body {
 .bike {
   width: 400px;
   position: absolute;
-  top: -50px;
+  top: 10px;
   left: 0;
   z-index: 1;
+  transform: scale(0.7);
 }
 
 .bike-tyre {
   position: absolute;
   width: 120px;
   height: auto;
+  transform: scale(0.7);
 }
 
 .motorbike img:nth-child(2){
-  top: 150px;
-  left: -10px;
+  top: 170px;
+  left: 40px;
 }
 
 .motorbike img:nth-child(3){
-  top: 150px;
-  left: 290px;
+  top: 175px;
+  left: 270px;
 }
 
 .position_lady {
@@ -98,13 +101,13 @@ body {
 .lady {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 50px;
   width: 100px;
   height: 210px;
   background: url("img/lady.png");
   background-repeat: no-repeat;
   background-size: contain;
-  /* transform: scaleX(-1); */
+  transform: scale(1.6);
 }
 
 .shops {
